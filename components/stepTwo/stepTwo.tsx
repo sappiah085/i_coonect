@@ -61,8 +61,8 @@ export default function StepTwo({ handleNext }: any) {
             Dislike
           </h1>
           <p className="text-purple font-medium  text-center">
-            Now we are at likes, choose what you would like to see while on
-            connect, remember you can change it anytime
+            Now we are at dislikes, choose what you wouldn’t like to see while
+            on connect, remember you can change it anytime
           </p>
           <input
             className="bg-grey/20 self-start w-[90%] p-2 rounded-xl outline-none border-[1px] border-white focus-within:border-purple"

@@ -1,10 +1,11 @@
 * {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 *::-webkit-scrollbar {
   display: none;
   background: transparent;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -14,6 +15,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 @tailwind base;
 @tailwind components;

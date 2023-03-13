@@ -22,7 +22,7 @@ export default function StepOne({ handleNext }: any) {
       className="flex w-full m-auto flex-col gap-1 items-center py-2"
     >
       <div className="w-full  flex items-center max-w-6xl justify-between flex-wrap-reverse">
-        <p className="font-semibold text_ani flex-shrink-0 min-w-[200px] text-xl lg:text-left lg:text-2xl text-deep_blue flex-grow flex-1 text-center max-w-lg">
+        <p className="font-semibold text_ani flex-shrink-0 min-w-[200px]  lg:text-left lg:text-2xl text-deep_blue flex-grow flex-1 text-center max-w-lg">
           Hi!, welcome to connect, we know its your first time here and we would
           like to show you around. So why don’t you finish up with your sign up
           process and allow us show you what the world really could be.{" "}

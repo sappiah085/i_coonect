@@ -12,8 +12,8 @@ export default function SignUp() {
     >
       <Form label="Sign Up" image={signUp}>
         <form
-          className="flex-1 font-Glacial_Indifference max-w-sm flex flex-col items-center gap-4 form"
-          action="/"
+          className="flex-1 font-Glacial_Indifference max-w-sm flex flex-col items-center gap-4 form "
+          action="/setup" //TODO:manually send data and route
         >
           <h1 className="text-deep_blue font-Montserrat text-4xl mb-10 font-extrabold hidden lg:flex ">
             Sign Up
@@ -72,7 +72,7 @@ export default function SignUp() {
               className="absolute transition-all duration-150 top-[50%] scale-90as translate-x-[-1%] left-0 translate-y-[-110%]  peer-placeholder-shown:translate-y-[-30%] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-x-0"
               htmlFor="username"
             >
-              What shall we call ?
+              What shall we call you ?
             </label>
           </div>
           <div className="flex relative flex-col w-full md:text-lg">

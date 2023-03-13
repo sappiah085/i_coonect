@@ -24,7 +24,7 @@ export default function Finish({ handleNext }: any) {
     >
       <div className="w-full  flex items-center max-w-6xl justify-between flex-wrap-reverse">
         <div className="flex flex-col lg:gap-24 min-h-full flex-grow">
-          <p className="font-semibold text_ani flex-shrink-0 min-w-[200px] text-xl lg:text-left lg:text-2xl text-deep_blue flex-grow flex-1 text-center max-w-lg">
+          <p className="font-semibold text_ani flex-shrink-0 min-w-[200px] lg:text-left lg:text-2xl text-deep_blue flex-grow flex-1 text-center max-w-lg">
             All you need to do now is to tap “Finish”, we’ll be waiting for you
             on the other side.
             <br />
@@ -40,7 +40,7 @@ export default function Finish({ handleNext }: any) {
               Back
             </button>
             <Link
-              href={"/"}
+              href={"/home"}
               className="bg-main_blue mt-5 md:mt-0 border-2 font-Open_Sans border-white w-fit  font-semibold text-white text-lg  py-2 px-14 rounded-3xl hover:bg-white hover:text-main_blue hover:border-main_blue"
               type="submit"
             >
@@ -50,7 +50,7 @@ export default function Finish({ handleNext }: any) {
         </div>
 
         <Image
-          className="image h-[27rem] object-contain"
+          className="image lg:h-[27rem]  object-contain"
           src={stepOne}
           alt="step one"
         />

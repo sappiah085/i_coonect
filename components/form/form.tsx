@@ -19,13 +19,13 @@ export default function Form({ children, label, image }: any) {
   return (
     <section
       ref={container}
-      className="w-full max-w-[2500px] flex flex-col p-5"
+      className="w-full max-w-[2500px] flex flex-col p-5 self-start relative"
     >
       <h1 className="text-purple text-3xl lg:hidden font-extrabold">{label}</h1>
-      <div className="flex w-full flex-wrap items-start justify-around px-2 ">
+      <div className="flex w-full flex-wrap items-start justify-around px-2">
         <Image
           priority
-          className="min-w-[230px] flex-1 max-w-lg flex-shrink-0 image_il"
+          className="min-w-[230px] flex-1 max-w-lg flex-shrink-0 image_il lg:sticky top-10"
           src={image}
           alt="illustration"
         />

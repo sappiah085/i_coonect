@@ -13,8 +13,9 @@ export default function LayoutForAfterSplash({
       style={{
         height: !on ? "100%" : "0px",
         opacity: !on ? 1 : 0,
+        overflow: !on ? "visible" : "hidden",
       }}
-      className="flex overflow-hidden transition-opacity delay-300 flex-col font-Montserrat items-center justify-start w-full max-w-[2500px] mx-auto duration-500"
+      className="flex transition-opacity delay-300 flex-col font-Montserrat items-center justify-start w-full max-w-[2500px] mx-auto duration-500"
     >
       <header className="w-full flex items-center">
         <nav className="flex justify-between items-center w-full  p-7 text-xl">
