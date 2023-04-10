@@ -65,7 +65,7 @@ const RecommendedCard = () => {
           <p className=" text-[#BFCCD9] font-semibold text-[.62rem] lg:text-[0.75rem]">
             Disclaimer : 18 and above, may contain nuidity
           </p>
-          <div className="flex w-full justify-between items-center gap-[2px]  text-grey font-semibold text-base">
+          <div className="flex w-full justify-between items-center gap-[2px]  text-grey font-semibold text-sm">
             <span>Movie</span> <span>1 hr 30 mins</span> <span>High Sch.</span>{" "}
             <span className="flex items-center">
               <span className="text-[#F3CE13]">
