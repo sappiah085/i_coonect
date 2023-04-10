@@ -12,7 +12,7 @@ export default function Login() {
     >
       <Form label="Log In" image={login}>
         <form
-          className="flex-1 font-Glacial_Indifference max-w-sm flex flex-col items-center gap-4 form"
+          className="flex-1 font-Glacial_Indifference max-w-md flex flex-col items-center  basis-72 gap-4 form"
           action="/home"
         >
           <h1 className="text-deep_blue font-Montserrat text-4xl mb-10 font-extrabold hidden lg:flex ">

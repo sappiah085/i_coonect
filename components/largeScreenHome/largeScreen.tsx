@@ -7,7 +7,7 @@ export default function LargeScreenHome() {
       <Tag />
       <div className="w-full py-6 grid grid-cols-4  gap-2">
         <div className="row-start-1 h-[25rem]  col-start-1 col-span-2">
-          <FeatureCard />
+          <FeatureCard bookmarked />
         </div>
         <div className="row-start-1 h-[25rem]  col-start-3 ">
           <FeatureCard />

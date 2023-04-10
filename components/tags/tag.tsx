@@ -6,7 +6,7 @@ export default function Tag({ pl = "pl-[20%] w-full " }: any) {
       {["All", "Movies", "shorts", "series"].map((label, id) => (
         <button
           style={{ color: id == 0 ? "#FF003C" : "#5C5C5C" }}
-          className="uppercase  text-sm font-bold p-1 px-3 bg-grey/95 rounded-3xl"
+          className="uppercase  text-sm font-bold p-1 px-3 bg-grey/25 rounded-3xl"
           key={label}
         >
           {label}

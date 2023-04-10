@@ -12,7 +12,7 @@ export default function SignUp() {
     >
       <Form label="Sign Up" image={signUp}>
         <form
-          className="flex-1 font-Glacial_Indifference max-w-sm flex flex-col items-center gap-4 form "
+          className="flex-1 font-Glacial_Indifference max-w-md flex flex-col basis-72  items-center gap-4 form "
           action="/setup" //TODO:manually send data and route
         >
           <h1 className="text-deep_blue font-Montserrat text-4xl mb-10 font-extrabold hidden lg:flex ">

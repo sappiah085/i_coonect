@@ -22,7 +22,7 @@ export default function Form({ children, label, image }: any) {
       className="w-full max-w-[2500px] flex flex-col p-5 self-start relative"
     >
       <h1 className="text-purple text-3xl lg:hidden font-extrabold">{label}</h1>
-      <div className="flex w-full flex-wrap items-start justify-around px-2">
+      <div className="flex w-full flex-wrap items-start justify-center lg:gap-14 px-2">
         <Image
           priority
           className="min-w-[230px] flex-1 max-w-lg flex-shrink-0 image_il lg:sticky top-10"

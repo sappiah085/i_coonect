@@ -11,7 +11,12 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+#__next {
+  @apply w-full mx-auto p-0 m-0 flex flex-col items-center;
+}
+.slick-arrow.slick-next {
+  display: none !important;
+}
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
