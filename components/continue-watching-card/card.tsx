@@ -1,14 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
-import eagle from "@/public/assets/eagle.jpeg";
-const Card = () => {
+const Card = ({ image, year }: { image: string; year: number }) => {
   return (
     <article className="w-[190px] snap-center gap-1  flex flex-col justify-between items-start">
       <div className="relative w-full rounded-sm overflow-hidden   h-[242px]">
         <Image
           className="absolute object-cover -z-[1] top-0 left-0 h-full w-full"
-          src={eagle}
+          src={image}
+          width={200}
+          height={200}
           alt="eagle"
         />
         <span className="z-[1] flex flex-col justify-between h-full py-2">
@@ -58,7 +59,7 @@ const Card = () => {
         </span>
       </div>
       <div className="flex justify-between items-center w-full text-deep_blue font-semibold text-sm">
-        <span>Movie</span> <span>Action</span> <span>2024</span>{" "}
+        <span>Movie</span> <span>Action</span> <span>{year}</span>{" "}
         <span className="flex items-center">
           <span className="text-[#F3CE13]">
             <AiFillStar />

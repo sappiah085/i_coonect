@@ -1,14 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
-import eagle from "@/public/assets/eagle.jpeg";
-const BookmarkedCard = () => {
+const BookmarkedCard = ({ image }: { image: string }) => {
   return (
     <article className="flex w-full lg:mr-6  gap-3">
       <div className="md:w-[200px] flex-shrink-0 w-[180px]">
         <Image
           className="object-cover w-full h-full rounded-md "
-          src={eagle}
+          src={image}
+          height={200}
+          width={200}
           alt="movie alt"
         />
       </div>

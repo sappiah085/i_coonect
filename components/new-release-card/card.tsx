@@ -1,13 +1,14 @@
 import React from "react";
-import eagle from "@/public/assets/eagle.jpeg";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
-const NewReleaseCard = () => {
+const NewReleaseCard = ({ image }: { image: string }) => {
   return (
     <article className="min-w-[266px] snap-center  max-w-[558.6px] w-full flex gap-1 flex-col">
       <span>
         <Image
-          src={eagle}
+          src={image}
+          height={200}
+          width={200}
           className="object-center object-cover  w-[266px] md:h-[338.1px] md:w-[558.6px] rounded-md h-[161px]"
           alt="eagle"
         />

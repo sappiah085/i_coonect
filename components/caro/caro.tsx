@@ -1,13 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import image from "@/public/assets/image.png";
 import { AiFillStar } from "react-icons/ai";
-const Caro = () => {
+const Caro = ({ image }: { image: string }) => {
   return (
     <article className="flex rounded-md overflow-hidden flex-col justify-between relative w-full md:h-[476px]  mx-auto h-[202px] after:absolute after:h-full after:w-full after:top-0 after:left-0 after:bg-black/50 ">
       <Image
         className="absolute top-0 w-full h-full object-cover left-0"
         src={image}
+        height={200}
+        width={200}
         alt="image"
       />
       <div className="z-[1] text-white p-4  flex flex-col justify-between h-full">

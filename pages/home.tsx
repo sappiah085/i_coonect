@@ -9,6 +9,7 @@ import NewReleaseCard from "@/components/new-release-card/card";
 import PicksCard from "@/components/picks-card";
 import RecommendedCard from "@/components/recommended-card";
 import SmallHomeScreen from "@/components/smallScreenHome/smallScreenHome";
+import { CW } from "@/utils/simData";
 import Head from "next/head";
 import { useState } from "react";
 import Slider from "react-slick";
@@ -60,42 +61,40 @@ export default function Home() {
         </Category>
 
         <Category label={"CONTINUE WATCHING"}>
-          {colors.map((color) => {
-            return <Card key={color} />;
+          {CW.map(({ image, ...rest }) => {
+            return <Card key={image} image={image} {...rest} />;
           })}
         </Category>
 
         <Category label={"Bookmarked"}>
-          {colors.map((color) => {
-            return <BookmarkedCard key={color} />;
+          {CW.map(({ label, ...rest }) => {
+            return <BookmarkedCard key={label} {...rest} />;
           })}
         </Category>
 
         <Category scrollable={false} label="Featured">
           <Slider {...settings}>
-            {colors.map((color) => (
-              <Caro key={color} />
+            {CW.map(({ label, ...rest }) => (
+              <Caro key={label} {...rest} />
             ))}
           </Slider>
         </Category>
 
         <Category label={"New Release"}>
-          {colors.map((color) => {
-            return <NewReleaseCard key={color} />;
+          {CW.map(({ label, ...rest }) => {
+            return <NewReleaseCard key={label} {...rest} />;
           })}
         </Category>
 
         <Category label={"Picks"}>
-          {["Action", "Thriller", "Adventure", "Shorts", "SCI-FI"].map(
-            (label) => {
-              return <PicksCard label={label} key={label} />;
-            }
-          )}
+          {CW.map(({ label, ...rest }) => {
+            return <PicksCard label={label} {...rest} key={label} />;
+          })}
         </Category>
 
         <Category label={"Recommend"}>
-          {colors.map((color) => {
-            return <RecommendedCard key={color} />;
+          {CW.map(({ image, ...rest }) => {
+            return <RecommendedCard image={image} {...rest} key={image} />;
           })}
         </Category>
       </MainLayout>

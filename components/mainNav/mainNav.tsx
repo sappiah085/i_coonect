@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../public/assets/logo.svg";
+import logo from "../../public/assets/icons/logo.svg";
 import Link from "next/link";
 import Search from "../search/search";
 export default function MainNav() {

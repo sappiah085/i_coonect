@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
-import image from "@/public/assets/image.png";
-const RecommendedCard = () => {
+const RecommendedCard = ({ image }: { image: string }) => {
   return (
     <article className="flex pt-7 lg:pt-11 px-2 lg:px-3 rounded-md overflow-hidden flex-col justify-between relative w-[253px] md:w-[323.73px] md:h-[497.09px] h-[281px] flex-shrink-0 after:absolute after:h-full after:w-full after:top-0 after:left-0 after:bg-black/50 pb-3 ">
       <button className="z-[1]  text-xl absolute top-3 right-3 text-black ">
@@ -50,6 +49,8 @@ const RecommendedCard = () => {
         className="absolute top-0 w-full h-full object-fill left-0"
         src={image}
         alt="image"
+        height={200}
+        width={200}
       />
       <div className="z-[1] text-white  w-full  flex flex-col justify-between h-full">
         <div className="flex flex-col  gap-3">

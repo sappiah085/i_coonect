@@ -1,12 +1,17 @@
 import Image from "next/image";
-import image from "../../public/assets/image.png";
 export default function FeatureCard({
   bookmarked = false,
+  header,
+  message,
+  image,
 }: {
   bookmarked?: boolean;
+  image: any;
+  header: string;
+  message?: string;
 }) {
   return (
-    <article className="w-full text-white h-full relative rounded-md overflow-hidden flex flex-col justify-between after:absolute after:h-full after:w-full after:top-0 after:left-0 after:bg-black/50 font-Montserrat ">
+    <article className="w-full text-white h-full relative rounded-md overflow-hidden flex flex-col justify-between after:absolute after:h-full after:w-full after:top-0 after:left-0 after:bg-black/10 font-Montserrat ">
       <Image
         className="absolute h-full w-full object-cover"
         src={image}
@@ -14,12 +19,8 @@ export default function FeatureCard({
       />
 
       <span className="z-[1] p-5 flex flex-col gap-5 max-w-sm">
-        <h2 className="text-3xl font-bold">The End of Nowhere</h2>
-        <p className="text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          malesuada amet accumsan dolor orci, at. In sociis arcu turpis enim sem
-          ultricies maecenas adipiscing.{" "}
-        </p>
+        <h2 className="text-3xl font-bold">{header}</h2>
+        {message && <p className="text-sm">{message}</p>}
       </span>
 
       {/* bookmarked Icon  */}

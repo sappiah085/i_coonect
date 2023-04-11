@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "../../public/assets/image.png";
+import image from "../../public/assets/feature/image.png";
 export default function ChartVideoCard({
   label,
   color,
@@ -8,7 +8,7 @@ export default function ChartVideoCard({
   label: string;
 }) {
   return (
-    <article className="snap-center font-Montserrat relative w-[250px] flex-shrink-0 h-[200px] after:absolute cursor-pointer after:top-0 after:left-0 after:h-full after:w-full after:bg-black/25 rounded-md overflow-hidden flex flex-col ">
+    <article className="snap-center font-Montserrat relative w-[250px] flex-shrink-0 h-[200px] after:absolute cursor-pointer after:top-0 after:left-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#000000B0] after:to-[#00000078] rounded-md overflow-hidden flex flex-col ">
       <Image className="absolute h-full w-full" src={image} alt="card image" />
       <span className="p-5 z-[1] w-full  h-full flex flex-col gap-2">
         <h2
@@ -23,7 +23,9 @@ export default function ChartVideoCard({
         </h4>
         <h5 className="text-white">94%</h5>
       </span>
-      <h3 className="text-grey text-sm z-[1] mx-auto font-semibold pb-1">Promotions Included</h3>
+      <h3 className="text-grey text-sm z-[1] mx-auto font-semibold pb-1">
+        Promotions Included
+      </h3>
     </article>
   );
 }
