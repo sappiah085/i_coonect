@@ -6,7 +6,7 @@ const Caro = () => {
   return (
     <article className="flex rounded-md overflow-hidden flex-col justify-between relative w-full md:h-[476px]  mx-auto h-[202px] after:absolute after:h-full after:w-full after:top-0 after:left-0 after:bg-black/50 ">
       <Image
-        className="absolute top-0 w-full h-full object-fill left-0"
+        className="absolute top-0 w-full h-full object-cover left-0"
         src={image}
         alt="image"
       />
@@ -15,7 +15,7 @@ const Caro = () => {
           <h3 className="md:text-3xl text-lg font-bold">
             Once Upon A Time In Nethr....
           </h3>
-          <p className="w-full max-w-sm text-[#BFCCD9] font-semibold text-base md:text-xl">
+          <p className="w-full max-w-sm text-[#BFCCD9] font-semibold text-sm md:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue
             lacus, scelerisque pretium consectetur. In vitae eu faucibus vel.
           </p>
