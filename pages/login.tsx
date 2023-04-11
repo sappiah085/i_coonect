@@ -1,7 +1,7 @@
 import Form from "@/components/form/form";
 import LayoutForAfterSplash from "@/components/layout/layout";
 import Link from "next/link";
-import login from "../public/assets/login.webp";
+import login from "../public/assets/illustrations/login.webp";
 export default function Login() {
   return (
     <LayoutForAfterSplash

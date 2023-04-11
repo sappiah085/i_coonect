@@ -1,5 +1,5 @@
 import Image from "next/image";
-import stepOne from "../../public/assets/stepone.webp";
+import stepOne from "../../public/assets/illustrations/stepone.webp";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 export default function StepOne({ handleNext }: any) {

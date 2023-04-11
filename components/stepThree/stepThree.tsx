@@ -1,9 +1,9 @@
 import Image from "next/image";
-import blogging from "../../public/assets/blogging.png";
-import vlogging from "../../public/assets/vlogging.png";
-import messaging from "../../public/assets/messaging.png";
-import four from "../../public/assets/four.svg";
-import phone from "../../public/assets/first.svg";
+import blogging from "../../public/assets/illustrations/blogging.png";
+import vlogging from "../../public/assets/illustrations/vlogging.png";
+import messaging from "../../public/assets/illustrations/messaging.png";
+import four from "../../public/assets/icons/four.svg";
+import phone from "../../public/assets/icons/first.svg";
 export default function StepThree({ handleNext }: any) {
   return (
     <section className="flex flex-col w-full items-center font-Montserrat text-deep_blue font-bold m-auto gap-10 py-3">

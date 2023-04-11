@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import connect from "../../public/assets/connect.svg";
+import connect from "../../public/assets/icons/connect.svg";
 export default function LayoutForAfterSplash({
   children,
   on,

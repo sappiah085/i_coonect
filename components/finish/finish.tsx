@@ -1,5 +1,5 @@
 import Image from "next/image";
-import stepOne from "../../public/assets/finish.png";
+import stepOne from "../../public/assets/illustrations/finish.png";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";

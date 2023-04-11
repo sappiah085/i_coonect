@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../public/assets/connect.svg";
+import logo from "../public/assets/icons/connect.svg";
 import StepOne from "@/components/stepOne/stepOne";
 import { useState } from "react";
 import StepTwo from "@/components/stepTwo/stepTwo";

@@ -1,8 +1,8 @@
 import JoinCard from "../joinCard/joincard";
-import first from "../../public/assets/first.svg";
-import two from "../../public/assets/two.svg";
-import three from "../../public/assets/three.svg";
-import four from "../../public/assets/four.svg";
+import first from "../../public/assets/icons/first.svg";
+import two from "../../public/assets/icons/two.svg";
+import three from "../../public/assets/icons/three.svg";
+import four from "../../public/assets/icons/four.svg";
 import { useEffect } from "react";
 import Link from "next/link";
 const illus = [

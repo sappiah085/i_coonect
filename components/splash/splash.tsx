@@ -1,6 +1,6 @@
 import Image from "next/image";
-import logo from "../../public/assets/logo.svg";
-import svg from "../../public/assets/circular_logo.svg";
+import logo from "../../public/assets/icons/logo.svg";
+import svg from "../../public/assets/icons/circular_logo.svg";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 export default function Splash({ on }: { on: boolean }) {
