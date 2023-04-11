@@ -1,4 +1,9 @@
+import { useState } from "react";
+import Overlay from "../overLay";
+import Filter from "../filter/filter";
+
 export default function Search({ show = "hidden lg:flex w-1/3" }: any) {
+  const [openFilter, setOpenFilter] = useState(false);
   return (
     <div className={" items-center  gap-4 " + show}>
       <input
@@ -30,7 +35,10 @@ export default function Search({ show = "hidden lg:flex w-1/3" }: any) {
           />
         </svg>
       </button>
-      <button className="bg-red p-1 rounded-md">
+      <button
+        onClick={() => setOpenFilter(true)}
+        className="bg-red p-1 rounded-md"
+      >
         <svg
           width="24"
           height="24"
@@ -61,6 +69,11 @@ export default function Search({ show = "hidden lg:flex w-1/3" }: any) {
           />
         </svg>
       </button>
+      {openFilter && (
+        <Overlay closeFunc={() => setOpenFilter(false)}>
+          <Filter />
+        </Overlay>
+      )}
     </div>
   );
 }

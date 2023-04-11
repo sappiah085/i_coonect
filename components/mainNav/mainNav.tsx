@@ -2,7 +2,12 @@ import Image from "next/image";
 import logo from "../../public/assets/icons/logo.svg";
 import Link from "next/link";
 import Search from "../search/search";
+import Overlay from "../overLay";
+import Menu from "../menu/menu";
+import { links } from "./menu-items";
+import { useState } from "react";
 export default function MainNav() {
+  const [openNav, setOpenNav] = useState(false);
   return (
     <header className="w-full bg-white flex items-center fixed top-0 px-5 p-3 z-40">
       <nav className="w-full flex items-center justify-between">
@@ -13,7 +18,6 @@ export default function MainNav() {
             alt="logo"
           />
         </Link>
-
         <Search />
         <div className="flex items-center gap-5">
           <button>
@@ -40,7 +44,7 @@ export default function MainNav() {
               />
             </svg>
           </button>
-          <button>
+          <button onClick={() => setOpenNav(true)}>
             <svg
               width="24"
               height="24"
@@ -74,6 +78,22 @@ export default function MainNav() {
           <Image className="h-7 md:h-8  w-fit" src={logo} alt="user" />
         </div>
       </nav>
+      {openNav && (
+        <Overlay closeFunc={() => setOpenNav((pre) => !pre)}>
+          <Menu
+            items={links}
+            render={({ icon, label, link }: typeof links[0]) => (
+              <Link
+                onClick={() => setOpenNav((pre) => !pre)}
+                className="flex items-center gap-3"
+                href={link}
+              >
+                <Image className="h-[24px]" src={icon} alt={label} /> {label}
+              </Link>
+            )}
+          />
+        </Overlay>
+      )}
     </header>
   );
 }

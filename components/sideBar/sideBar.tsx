@@ -1,31 +1,37 @@
 import Link from "next/link";
 import { sideLinks } from "./sideBarLinks";
 import { useRouter } from "next/router";
+import { ReactElement } from "react";
 
 export default function SideBar() {
   const { pathname } = useRouter();
 
   return (
     <>
-      <div className="hidden h-screen flex-shrink-0  flex-col  lg:flex w-[15%] font-Montserrat py-9"></div>
-      <aside className="w-full fixed bottom-0 lg:top-0 lg:h-screen   lg:flex-col  flex lg:w-[15%] bg-white font-Montserrat py-9 z-10">
-        <nav className="w-full h-full lg:py-14  justify-around lg:justify-start lg:items-start flex lg:flex-col lg:gap-10">
-          {sideLinks.map(({ url, label, icon }) => {
+      <div className="hidden h-screen flex-shrink-0  flex-col  lg:flex w-[15%] font-Montserrat lg:pt-9 lg:pb-2 lg:py-0 py-9"></div>
+      <aside
+        className={`w-full fixed bottom-0 lg:top-0 lg:h-screen   lg:flex-col  flex lg:w-[15%] font-Montserrat py-9 lg:pt-9 lg:pb-5 lg:py-0 z-10 ${
+          pathname.includes("trailer") ? "bg-transparent" : "bg-white "
+        }`}
+      >
+        <nav className="w-full h-full lg:pt-14  justify-around lg:justify-start lg:items-start flex lg:flex-col lg:gap-10">
+          {sideLinks.map(({ url, label, icon: Icon }) => {
             const color = pathname === url ? "#111F5F" : "#C4C4C4";
 
             return (
               <Link
                 style={{ fill: color, color: color }}
-                className="flex  items-center  justify-start lg:w-full lg:px-4 gap-5 uppercase font-bold text-grey text-sm"
+                className="flex  items-center  justify-start lg:w-full lg:px-4 gap-5 uppercase font-bold text-grey text-sm "
                 href={url}
                 key={label}
               >
-                {icon} <span className="hidden lg:inline-block">{label}</span>
+                <Icon fill={color} />{" "}
+                <span className="hidden lg:inline-block">{label}</span>
               </Link>
             );
           })}
           <Link
-            className="flex  mt-auto  items-center justify-start  lg:w-full px-4 gap-5 uppercase   font-bold text-deep_blue text-sm"
+            className="lg:flex  mt-auto  items-center justify-start hidden lg:w-full px-4 gap-5 uppercase   font-bold text-deep_blue text-sm"
             href={"/setting"}
           >
             <svg

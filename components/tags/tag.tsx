@@ -1,4 +1,4 @@
-export default function Tag({ pl = "pl-[20%] w-full " }: any) {
+export default function Tag({ pl = "pl-[30%] w-full " }: { pl?: string }) {
   return (
     <div
       className={"z-30 font-Montserrat  left-0 flex  items-center gap-4 " + pl}
