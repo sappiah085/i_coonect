@@ -4,7 +4,7 @@ import Link from "next/link";
 import Search from "../search/search";
 import Overlay from "../overLay";
 import Menu from "../menu/menu";
-import { links } from "./menu-items";
+import { links } from "../../utils/menu-items";
 import { useState } from "react";
 export default function MainNav() {
   const [openNav, setOpenNav] = useState(false);

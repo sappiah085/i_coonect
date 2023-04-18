@@ -1,3 +1,8 @@
+import Menu from "@/components/menu/menu";
+import Overlay from "@/components/overLay";
+import { links } from "@/utils/menu-items";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 export default function MainNav() {
   const [openNav, setOpenNav] = useState(false);
@@ -62,6 +67,22 @@ export default function MainNav() {
           </svg>
         </button>
       </nav>
+      {openNav && (
+        <Overlay closeFunc={() => setOpenNav((pre) => !pre)}>
+          <Menu
+            items={links}
+            render={({ icon, label, link }: typeof links[0]) => (
+              <Link
+                onClick={() => setOpenNav((pre) => !pre)}
+                className="flex items-center gap-3"
+                href={link}
+              >
+                <Image className="h-[24px]" src={icon} alt={label} /> {label}
+              </Link>
+            )}
+          />
+        </Overlay>
+      )}
     </header>
   );
 }
