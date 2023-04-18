@@ -23,7 +23,7 @@ const Overlay = ({
   return (
     <div
       ref={parent}
-      className="h-[100vh] flex flex-col items-center justify-end top-0 left-0 z-50 w-full fixed bg-black/50"
+      className="h-[100dvh] flex flex-col items-center justify-end top-0 left-0 z-50 w-full fixed bg-black/50 overflow-hidden"
     >
       <OutsideClickHandler display="contents" onOutsideClick={closeFunc}>
         <div className="bg-white p-2 py-4 w-[95%] max-w-md rounded-t-md child">
